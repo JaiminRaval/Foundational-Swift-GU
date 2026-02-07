@@ -45,7 +45,6 @@ Whether you're a complete beginner or looking to strengthen your Swift knowledge
 - **[100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui)** - Modern SwiftUI-focused learning path
 - **[Hacking with Swift](https://www.hackingwithswift.com/)** - Extensive tutorials, articles, and guides
 - **[SwiftUI by Example](https://www.hackingwithswift.com/quick-start/swiftui)** - Over 600 pages of SwiftUI examples
-- **[Unwrap App](https://www.hackingwithswift.com/unwrap)** - Free iOS app for learning Swift on the go
 
 #### Stanford University
 - **[CS193p - Developing Apps for iOS](https://cs193p.sites.stanford.edu/)** - World-renowned course by Paul Hegarty
@@ -60,6 +59,9 @@ Whether you're a complete beginner or looking to strengthen your Swift knowledge
 - **[Swift by Sundell](https://www.swiftbysundell.com/)** - Blog and podcast by John Sundell
 - Articles cover tips, best practices, and advanced Swift topics
 - Excellent for understanding real-world Swift development
+
+#### SwiftLee by Avanderlee
+- **[SwiftLee](https://www.avanderlee.com/)** - Deep dive Blogs on everything iOS by Anander Lee
 
 ### Books & Written Resources
 
@@ -98,10 +100,9 @@ Whether you're a complete beginner or looking to strengthen your Swift knowledge
 Each week contains:
 - **Code Examples** - Practical Swift code demonstrating concepts
 - **Exercises** - Practice problems to reinforce learning
-- **Projects** - Small projects applying the week's concepts
 - **README** - Weekly learning objectives and notes
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -113,7 +114,7 @@ Each week contains:
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Thanks to the Swift community for excellent learning resources
 - Special thanks to Paul Hudson (Hacking with Swift), Ray Wenderlich, and John Sundell for their invaluable contributions to Swift education
@@ -121,8 +122,20 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-**Happy Coding! 🎉**
+## License
+
+This project is licensed under the **[MIT License](https://)**, Use it for leaning & growing folks.
+
+**Happy Coding!**
 
 Remember: Learning anything in our lives is a journey. Take it one step at a time, practice regularly, and don't hesitate to ask for help when needed.
 
-                                                      - jaimin
+And most important is to create something worthwhile during this journey.
+
+"What I cannot create, I do not understand" ~ Richard Feynman
+
+"Any fool can Know, The point is to understand" ~ Albert Einstein
+
+
+
+- jaimin

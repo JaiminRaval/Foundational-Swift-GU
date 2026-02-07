@@ -56,7 +56,7 @@ let playerAge = age ?? 18
 struct User {
     var name: String?
     func getGreeting() -> String {
-        return "Hello!"
+        return "Hello \(name ?? "qwertyuio")!"
     }
 }
 
