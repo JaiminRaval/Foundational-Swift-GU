@@ -1,73 +1,54 @@
 import Foundation
+import FoundationNetworking
 
-// simple model to decode api response
-struct User: Codable {
+//"https://official-joke-api.appspot.com/jokes/random/25"
+
+//  DataModel created based on api
+struct JokeModel: Codable {
+
     let id: Int
-    let name: String
-    let email: String
+    let type: String
+    let setup: String
+    let punchline: String
+
 }
 
-// MARK: - approach 1: closure-based (@escaping)
+//    MARK: - native api call function
+func fetchJokes() {
 
-class APIServiceWithClosures {
+    //  URL string
+    let urlstr = "https://official-joke-api.appspot.com/jokes/random/25"
 
-    // @escaping means closure will be called after function returns
-    // Result type handles success/failure elegantly
-    func fetchUser(completion: @escaping (Result<User, Error>) -> Void) {
+    //  Converting URL string to valid URL
+    if let url = URL(string: urlstr) {
 
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/users/1") else {
-            completion(.failure(NSError(domain: "invalid url", code: -1)))
-            return
-        }
+        //  creating URLSession object
+        let session = URLSession.shared
 
-        // create and start the network request
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        //  calling the dataTask  Function
+        let dataTask = session.dataTask(with: url) { data, response, error in
+            //  unwrapping data
+            guard let jokeData = data else { return }
 
-            // check for network errors first
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-
-            // ensure we got data back
-            guard let data = data else {
-                completion(.failure(NSError(domain: "no data", code: -1)))
-                return
-            }
-
-            // try to decode json into our model
+            //  Try-Catch error handling
             do {
-                let user = try JSONDecoder().decode(User.self, from: data)
-                completion(.success(user))
-            } catch {
-                completion(.failure(error))
+                let jsonData = try JSONDecoder().decode([JokeModel].self, from: jokeData)
+
+                debugPrint(jsonData)
+
+            } catch (let err) {
+                debugPrint("error in decoding: \(err)")
             }
+
         }
+        // Start the network request
+        dataTask.resume()
 
-        task.resume()
-    }
-}
-
-// MARK: - approach 2: async/await
-
-// MARK: - usage examples
-
-// using the closure version
-func exampleWithClosures() {
-    let service = APIServiceWithClosures()
-
-    service.fetchUser { result in
-        switch result {
-        case .success(let user):
-            print("got user: \(user.name)")
-        // remember: this runs on background thread
-        // update ui on main thread:
-        // DispatchQueue.main.async { updateUI(user) }
-        case .failure(let error):
-            print("error: \(error.localizedDescription)")
-        }
+    } else {
+        print("url not valid")
     }
 
-    // function continues immediately, doesn't wait for response
-    print("request sent, waiting for response...")
 }
+
+fetchJokes()
+RunLoop.main.run()
