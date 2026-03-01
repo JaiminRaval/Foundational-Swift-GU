@@ -37,21 +37,21 @@ func createPlaylist() {
         //var allPlaylist: [Playlist] = []
 
         var allSongs: [Song] = []
-        var playlistName = getUserInput(promptText: "Enter name of playlist: ")
-        var songName = getUserInput(promptText: "Enter name of song: ")
-        var artistName = getUserInput(promptText: "Enter name of artist: ")
-        var songDuration =
+        let playlistName = getUserInput(promptText: "Enter name of playlist: ")
+        let songName = getUserInput(promptText: "Enter name of song: ")
+        let artistName = getUserInput(promptText: "Enter name of artist: ")
+        let songDuration =
             Double(getUserInput(promptText: "Enter duration of song (eg: 2.13): ")) ?? 0.0
 
         tDuration = tDuration + songDuration
-        var song = Song(name: songName, artist: artistName, duration: songDuration)
+        let song = Song(name: songName, artist: artistName, duration: songDuration)
         allSongs.append(song)
 
-        var playListObj = Playlist(
+        let playListObj = Playlist(
             playlistName: playlistName, songs: allSongs, totalDuration: tDuration)
         print("current playlist details: \(playListObj)")
 
-        var ans = getUserInput(promptText: "Do you want to enter more songs? (y/n): ")
+        let ans = getUserInput(promptText: "Do you want to enter more songs? (y/n): ")
         if ans == "y" {
             continueLoop = true
         } else {

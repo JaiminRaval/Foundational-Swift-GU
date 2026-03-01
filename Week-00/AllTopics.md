@@ -1,0 +1,38 @@
+<!-- This is an non-exhaustiv, extensive list of all topics related to Swift Lang covered in Labs -->
+
+- Topics:-
+
+  - Variables, Constants
+  - For Loop, While Loop
+  - dataTypes
+  - Enums
+  - string(manipulation, interpolation)
+  - Arrays, Dictionary
+  - Computed Properties
+  - Class & Structure
+  - Class vs Struct
+  - Inheritance
+  - Extension
+  - Access Modifiers (public, private, FilePrivate, Protected)
+  - Optionals
+  - Optional unwrapping
+  - ! Operator
+  - If Let & Guard Let
+  - Nil Coalescing Operator
+  - Type Casting & Type Conversion
+  - Functions, type of Func
+  - readLine() func
+  - Protocol
+  - intro to ARC(Automatic Reference Counting)
+  - TypeConversion
+  - TypeCasting
+  - ReadLine Func()
+  - API call (URL, URLSession, .dataTask())
+  - Codable (Encodable & Decodable
+  - JSONDecoder().decode() func
+  - Do-Try-Catch
+  - Closure
+  - Synchronous & Asynchronous
+  - Generics
+  - Higher Order Functions
+  - patterns and problem solving in swift
