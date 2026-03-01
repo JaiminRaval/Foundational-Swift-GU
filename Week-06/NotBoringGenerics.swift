@@ -1,3 +1,7 @@
+// Learning about generics right after higher-order functions is the exact right path.
+// If higher-order functions are the secret to writing clean code,
+// generics are the secret to writing reusable code.
+
 // For Integers
 func printInts(a: Int, b: Int) {
     print("Value 1: \(a), Value 2: \(b)")
@@ -10,6 +14,7 @@ func printStrings(a: String, b: String) {
 
 // For Doubles... you'd have to write a third function!
 
+// What Problem Generics solve? TLdr:- Repeating Yourself
 // The <T> tells Swift "T is a placeholder type".
 func printValues<T>(a: T, b: T) {
     print("Value 1: \(a), Value 2: \(b)")
